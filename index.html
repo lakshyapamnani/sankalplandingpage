@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Sankalp Academy | Building Strong Foundations (Grade 5 - 10)</title>
+
+    <meta name="description"
+        content="Sankalp Academy provides quality concept-focused coaching for Grade 5 to Grade 10 students (CBSE, ICSE, SSC, State Board) in Kalyan West.">
+
+    <meta name="keywords"
+        content="Sankalp Academy, Coaching Classes Kalyan West, Tuition Grade 5 to 10, CBSE Coaching, ICSE Tuition, SSC Classes">
+
+    <link rel="icon" href="sanklplogo.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SITE HEADER ================= -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="#home" class="brand-logo">
+                <img src="sanklplogo.jpg" alt="Sankalp Academy Logo">
+                <div class="brand-info">
+                    <h1>Sankalp Academy</h1>
+                    <p>Building Better Futures</p>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="desktop-nav">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#why">Why Us</a>
+                <a href="#courses">Courses</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+                <button class="desktop-nav-portals-link" id="desktopNavPortalsBtn">
+                    <i class="fa-solid fa-graduation-cap"></i> Portals
+                </button>
+            </nav>
+
+            <!-- Actions -->
+            <div class="header-actions">
+                <button class="desktop-portals-btn" id="webPortalsToggleBtn" aria-label="Toggle Portals Sidebar">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Academy Portals</span>
+                    <i class="fa-solid fa-chevron-right toggle-chevron"></i>
+                </button>
+                <button class="mobile-drawer-toggle" id="mobileDrawerToggle" aria-label="Toggle Mobile Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ================= WEB VIEW COLLAPSIBLE PORTALS SIDEBAR ================= -->
+    <div class="web-sidebar-backdrop" id="webPortalsBackdrop"></div>
+
+    <!-- Floating Edge Tab for Desktop (visible on screen right edge) -->
+    <button class="web-sidebar-edge-toggle" id="webPortalsEdgeToggle" aria-label="Toggle Portals Sidebar" title="Open Academy Portals Sidebar">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Portals</span>
+        <i class="fa-solid fa-angles-left edge-arrow"></i>
+    </button>
+
+    <!-- Collapsible Web Sidebar -->
+    <aside class="web-portals-sidebar" id="webPortalsSidebar" aria-label="Academy Portals Sidebar">
+        <div class="web-sidebar-header">
+            <div class="sidebar-brand-title">
+                <div class="sidebar-badge-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3>Academy Portals</h3>
+                    <p>Select your portal to log in</p>
+                </div>
+            </div>
+            <button class="web-sidebar-close" id="webPortalsCloseBtn" aria-label="Close Portals Sidebar" title="Collapse Sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="web-sidebar-body">
+            <div class="web-portal-card student-card">
+                <div class="portal-card-header">
+                    <div class="portal-icon-wrapper student-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <span class="portal-tag tag-student">Student</span>
+                </div>
+                <h4>Student Portal</h4>
+                <p>Access study resources, view class schedules, check assignment marks, and track performance.</p>
+                <a href="https://sankalpacademy.vercel.app/student" target="_blank" class="portal-launch-btn btn-student">
+                    <span>Launch Student Portal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="web-portal-card teacher-card">
+                <div class="portal-card-header">
+                    <div class="portal-icon-wrapper teacher-icon">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <span class="portal-tag tag-teacher">Faculty</span>
+                </div>
+                <h4>Teacher Portal</h4>
+                <p>Manage batch schedules, record daily attendance, upload course material, and send student updates.</p>
+                <a href="https://sankalpacademy.vercel.app/teacher" target="_blank" class="portal-launch-btn btn-teacher">
+                    <span>Launch Teacher Portal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="web-portal-card admin-card">
+                <div class="portal-card-header">
+                    <div class="portal-icon-wrapper admin-icon">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <span class="portal-tag tag-admin">Management</span>
+                </div>
+                <h4>Admin Portal</h4>
+                <p>Manage institute admissions, faculty assignments, system configurations, and master analytics.</p>
+                <a href="https://sankalpacademy.vercel.app/admin" target="_blank" class="portal-launch-btn btn-admin">
+                    <span>Launch Admin Portal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="web-sidebar-footer">
+            <p class="footer-help-text"><i class="fa-solid fa-headset"></i> Need portal support?</p>
+            <div class="footer-btn-group">
+                <a href="tel:+919152837001" class="btn-app btn-secondary-app sidebar-footer-btn">
+                    <i class="fa-solid fa-phone"></i> Call
+                </a>
+                <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20need%20assistance%20with%20Portal%20access." target="_blank" class="btn-app btn-emerald-app sidebar-footer-btn">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ================= MOBILE DRAWER NAVIGATION ================= -->
+    <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="brand-logo">
+                <img src="sanklplogo.jpg" alt="Sankalp Academy Logo" style="height:36px;">
+                <div class="brand-info">
+                    <h1 style="font-size:1.1rem;">Sankalp Academy</h1>
+                    <p style="font-size:0.65rem;">Kalyan West</p>
+                </div>
+            </div>
+            <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="drawer-nav">
+            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#about"><i class="fa-solid fa-circle-info"></i> About Us</a>
+            <a href="#why"><i class="fa-solid fa-award"></i> Why Choose Us</a>
+            <a href="#courses"><i class="fa-solid fa-graduation-cap"></i> Grade 5–10 Courses</a>
+            <a href="#process"><i class="fa-solid fa-route"></i> Teaching Process</a>
+            <a href="#contact"><i class="fa-solid fa-headset"></i> Contact Us</a>
+
+            <div
+                style="margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--neutral-200); display: flex; flex-direction: column; gap: 8px;">
+                <p
+                    style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--neutral-500); letter-spacing: 0.05em; margin-bottom: 2px; padding-left: 6px;">
+                    Academy Portals</p>
+                <a href="https://sankalpacademy.vercel.app/student" target="_blank"
+                    style="background: rgba(24, 58, 114, 0.06); color: var(--primary);"><i
+                        class="fa-solid fa-user-graduate" style="color: var(--primary);"></i> Student Portal</a>
+                <a href="https://sankalpacademy.vercel.app/teacher" target="_blank"
+                    style="background: rgba(16, 185, 129, 0.08); color: var(--accent-emerald);"><i
+                        class="fa-solid fa-chalkboard-user" style="color: var(--accent-emerald);"></i> Teacher
+                    Portal</a>
+                <a href="https://sankalpacademy.vercel.app/admin" target="_blank"
+                    style="background: rgba(99, 102, 241, 0.08); color: var(--accent-indigo);"><i
+                        class="fa-solid fa-user-shield" style="color: var(--accent-indigo);"></i> Admin Portal</a>
+            </div>
+        </nav>
+
+        <div class="drawer-footer">
+            <a href="tel:+919152837001" class="btn-app btn-primary-app" style="width:100%;">
+                <i class="fa-solid fa-phone"></i> Call +91 91528 37001
+            </a>
+            <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20would%20like%20to%20inquire%20about%20coaching%20classes."
+                target="_blank" class="btn-app btn-emerald-app" style="width:100%;">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+            </a>
+        </div>
+    </div>
+
+    <!-- ================= MOBILE BOTTOM NAVIGATION BAR ================= -->
+    <nav class="mobile-bottom-bar" id="mobileBottomBar">
+        <a href="#home" class="bottom-nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#courses" class="bottom-nav-item">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Courses</span>
+        </a>
+        <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20am%20reaching%20out%20from%20your%20website%20to%20inquire%20about%20coaching."
+            target="_blank" class="bottom-nav-action" aria-label="WhatsApp Inquire">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#why" class="bottom-nav-item">
+            <i class="fa-solid fa-star"></i>
+            <span>Why Us</span>
+        </a>
+        <a href="#contact" class="bottom-nav-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero-section">
+        <!-- Ambient Blur Spots -->
+        <div class="glow-ambient"
+            style="top: -100px; left: -100px; width: 350px; height: 350px; background: rgba(24, 58, 114, 0.25);"></div>
+        <div class="glow-ambient"
+            style="bottom: 0; right: -100px; width: 400px; height: 400px; background: rgba(16, 185, 129, 0.2);"></div>
+
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+            <div class="hero-grid">
+
+                <!-- Left Hero Content -->
+                <div class="hero-content" data-aos="fade-right">
+                    <div class="badge-pill badge-emerald">
+                        <i class="fa-solid fa-shield-halved"></i> Admissions Open for 2026–27
+                    </div>
+
+                    <h1 class="hero-title">
+                        Building Strong <br>
+                        <span class="gradient-text">Foundations.</span><br>
+                        Creating Better Futures.
+                    </h1>
+
+                    <p class="hero-description">
+                        Personalized, concept-focused coaching for Grade 5 to 10 students (CBSE, ICSE, SSC, State
+                        Board). Experienced faculty, weekly assessments, and dedicated academic guidance in Kalyan West.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20am%20interested%20in%20enrolling%20for%20coaching%20classes.%20Please%20share%20batch%20details%20and%20fee%20structure."
+                            target="_blank" class="btn-app btn-emerald-app">
+                            <i class="fa-brands fa-whatsapp"></i> Enroll Now
+                        </a>
+                        <a href="#courses" class="btn-app btn-secondary-app">
+                            <i class="fa-solid fa-compass"></i> Explore Courses
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image & Floating Cards -->
+                <div class="hero-media-wrapper" data-aos="fade-left">
+                    <img src="herosection.png" alt="Students Learning at Sankalp Academy" class="hero-main-img">
+
+                    <!-- Stat 2 -->
+                    <div class="hero-floating-stat stat-right glass-card">
+                        <div class="floating-icon"
+                            style="background: var(--accent-emerald-soft); color: var(--accent-emerald);">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; font-weight: 800;">95%</h4>
+                            <p style="font-size: 0.75rem; color: var(--neutral-500);">Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="stats-ribbon">
+                <div class="stat-card">
+                    <i class="fa-solid fa-calendar-check" style="color: var(--primary);"></i>
+                    <h3><span class="counter-val" data-target="5">5</span>+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-bullseye" style="color: var(--accent-amber);"></i>
+                    <h3><span class="counter-val" data-target="95">95</span>%</h3>
+                    <p>Academic Excellence</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-users-rectangle" style="color: var(--accent-indigo);"></i>
+                    <h3>Small</h3>
+                    <p>Focused Batch Sizes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" style="padding: 80px 0; background: var(--neutral-0);">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;"
+                class="md:grid-cols-2">
+
+                <div data-aos="fade-right" style="text-align: center;">
+                    <div
+                        style="background: linear-gradient(135deg, rgba(24,58,114,0.04) 0%, rgba(16,185,129,0.06) 100%); padding: 40px; border-radius: var(--radius-xl); display: inline-block;">
+                        <img src="sanklplogo.jpg" alt="Sankalp Academy Logo"
+                            style="width: 220px; margin: 0 auto; border-radius: var(--radius-md); box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="badge-pill badge-primary">
+                        <i class="fa-solid fa-circle-info"></i> About Our Academy
+                    </div>
+                    <h2 style="font-size: 2.2rem; margin-top: 14px; margin-bottom: 18px;">
+                        Nurturing Academic Excellence in <span class="gradient-text">Kalyan West</span>
+                    </h2>
+                    <p style="color: var(--neutral-500); line-height: 1.8; margin-bottom: 16px;">
+                        Sankalp Academy is a student-focused coaching institute dedicated to building conceptual
+                        clarity, disciplined study habits, and exam confidence for students from Grade 5 to Grade 10.
+                    </p>
+                    <p style="color: var(--neutral-500); line-height: 1.8; margin-bottom: 24px;">
+                        We go beyond simple memorization — our experienced faculty guides students step-by-step with
+                        regular tests, doubt solving, and personalized feedback.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 28px;">
+                        <div
+                            style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i> Concept
+                            Teaching
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i> Experienced
+                            Faculty
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i> Weekly Test
+                            Series
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i> Personal
+                            Attention
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20would%20like%20to%20schedule%20a%20free%20academic%20counselling%20session%20for%20my%20child."
+                        target="_blank" class="btn-app btn-emerald-app">
+                        <i class="fa-brands fa-whatsapp"></i> Schedule Free Counselling
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BENTO GRID (WHY CHOOSE US) ================= -->
+    <section id="why" style="padding: 80px 0; background: var(--neutral-50);">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+
+            <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+                <div class="badge-pill badge-emerald">
+                    <i class="fa-solid fa-star"></i> Why Choose Us
+                </div>
+                <h2 style="font-size: 2.2rem; margin-top: 14px; margin-bottom: 12px;">
+                    Designed for Maximum <span class="gradient-text">Student Growth</span>
+                </h2>
+                <p style="color: var(--neutral-500);">
+                    Every feature at Sankalp Academy is structured to help your child achieve top grades with
+                    confidence.
+                </p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card span-2" data-aos="fade-up">
+                    <div class="bento-icon" style="background: var(--primary-soft); color: var(--primary);">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3>Concept-First Learning Methodology</h3>
+                        <p>We eliminate rote learning by explaining core principles with real-life examples and
+                            practical problem solving.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-icon"
+                        style="background: var(--accent-emerald-soft); color: var(--accent-emerald);">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <div>
+                        <h3>Expert Dedicated Faculty</h3>
+                        <p>Subject experts with years of experience guiding Grade 5-10 board syllabi.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="bento-icon" style="background: rgba(245, 158, 11, 0.12); color: var(--accent-amber);">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
+                    <div>
+                        <h3>Weekly Practice Tests</h3>
+                        <p>Regular assessments to measure speed, accuracy, and syllabus retention.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up">
+                    <div class="bento-icon" style="background: rgba(99, 102, 241, 0.12); color: var(--accent-indigo);">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3>Individual Progress Reports</h3>
+                        <p>Detailed performance analytics provided regularly to parents.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div>
+                        <h3>Small Limited Batches</h3>
+                        <p>Guaranteed personal interaction and individual student attention.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card span-2" data-aos="fade-up" data-aos-delay="150">
+                    <div class="bento-icon" style="background: var(--primary-soft); color: var(--primary);">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3>Comprehensive Board Preparation</h3>
+                        <p>Targeted coaching tailored specifically for CBSE, ICSE, SSC, and State Board exam formats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= COURSES WE OFFER ================= -->
+    <section id="courses" style="padding: 80px 0; background: var(--neutral-0);">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+
+            <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+                <div class="badge-pill badge-primary">
+                    <i class="fa-solid fa-book-bookmark"></i> Academic Programs
+                </div>
+                <h2 style="font-size: 2.2rem; margin-top: 14px; margin-bottom: 12px;">
+                    Coaching for <span class="gradient-text">Grade 5 to Grade 10</span>
+                </h2>
+                <p style="color: var(--neutral-500);">
+                    Select a grade to explore subjects, study plans, and inquiry options.
+                </p>
+            </div>
+
+            <!-- Grade Filter Tabs -->
+            <div class="course-tabs-wrapper">
+                <button class="tab-btn active" data-filter="all">All Grades (5-10)</button>
+                <button class="tab-btn" data-filter="primary">Primary (Grade 5–7)</button>
+                <button class="tab-btn" data-filter="secondary">High School (Grade 8–10)</button>
+            </div>
+
+            <div class="courses-grid">
+
+                <!-- Grade 5 -->
+                <div class="course-card" data-category="primary" data-aos="fade-up">
+                    <div>
+                        <div class="course-grade-badge"><i class="fa-solid fa-graduation-cap"></i> Grade 5</div>
+                        <h3>Foundation Program</h3>
+                        <p style="color: var(--neutral-500); font-size: 0.9rem;">Building curiosity, reading habits,
+                            basic Mathematics, and Science fundamentals.</p>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Mathematics & Mental Ability</li>
+                            <li><i class="fa-solid fa-circle-check"></i> General Science & EVS</li>
+                            <li><i class="fa-solid fa-circle-check"></i> English Grammar & Reading</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20want%20to%20inquire%20about%20Grade%205%20coaching%20admissions%2C%20subject%20guidance%2C%20and%20fees."
+                        target="_blank" class="btn-app btn-emerald-app" style="width: 100%; margin-top: 16px;">
+                        <i class="fa-brands fa-whatsapp"></i> Inquire Grade 5
+                    </a>
+                </div>
+
+                <!-- Grade 6 -->
+                <div class="course-card" data-category="primary" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="course-grade-badge"><i class="fa-solid fa-graduation-cap"></i> Grade 6</div>
+                        <h3>Middle School Prep</h3>
+                        <p style="color: var(--neutral-500); font-size: 0.9rem;">Conceptual clarity in basic Algebra,
+                            Science experiments, and Social Studies.</p>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Physics, Chemistry, Biology intro</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mathematics & Geometry</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Weekly Revision & Homework support</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20want%20to%20inquire%20about%20Grade%206%20coaching%20admissions%2C%20subject%20guidance%2C%20and%20fees."
+                        target="_blank" class="btn-app btn-emerald-app" style="width: 100%; margin-top: 16px;">
+                        <i class="fa-brands fa-whatsapp"></i> Inquire Grade 6
+                    </a>
+                </div>
+
+                <!-- Grade 7 -->
+                <div class="course-card" data-category="primary" data-aos="fade-up" data-aos-delay="150">
+                    <div>
+                        <div class="course-grade-badge"><i class="fa-solid fa-graduation-cap"></i> Grade 7</div>
+                        <h3>Advanced Concepts</h3>
+                        <p style="color: var(--neutral-500); font-size: 0.9rem;">Strengthening numerical problem solving
+                            and structured answer writing skills.</p>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Mathematics & Equations</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Integrated Science</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Test Practice & Doubts Class</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20want%20to%20inquire%20about%20Grade%207%20coaching%20admissions%2C%20subject%20guidance%2C%20and%20fees."
+                        target="_blank" class="btn-app btn-emerald-app" style="width: 100%; margin-top: 16px;">
+                        <i class="fa-brands fa-whatsapp"></i> Inquire Grade 7
+                    </a>
+                </div>
+
+                <!-- Grade 8 -->
+                <div class="course-card" data-category="secondary" data-aos="fade-up">
+                    <div>
+                        <div class="course-grade-badge"
+                            style="background: var(--accent-emerald-soft); color: var(--accent-emerald);"><i
+                                class="fa-solid fa-graduation-cap"></i> Grade 8</div>
+                        <h3>Pre-Board Foundation</h3>
+                        <p style="color: var(--neutral-500); font-size: 0.9rem;">Transitioning to high school academic
+                            rigour with focused Subject guidance.</p>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Higher Mathematics & Physics</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Chemistry & Biology Detailed</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Monthly Progress Analytics</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20want%20to%20inquire%20about%20Grade%208%20coaching%20admissions%2C%20subject%20guidance%2C%20and%20fees."
+                        target="_blank" class="btn-app btn-emerald-app" style="width: 100%; margin-top: 16px;">
+                        <i class="fa-brands fa-whatsapp"></i> Inquire Grade 8
+                    </a>
+                </div>
+
+                <!-- Grade 9 -->
+                <div class="course-card" data-category="secondary" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="course-grade-badge"
+                            style="background: var(--accent-emerald-soft); color: var(--accent-emerald);"><i
+                                class="fa-solid fa-graduation-cap"></i> Grade 9</div>
+                        <h3>Board Gateway</h3>
+                        <p style="color: var(--neutral-500); font-size: 0.9rem;">Mastering 9th grade curriculum
+                            foundation vital for 10th Board success.</p>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Complete Science & Maths Syllabus</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Chapter-wise Worksheets</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Intensive Test Series</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20want%20to%20inquire%20about%20Grade%209%20coaching%20admissions%2C%20subject%20guidance%2C%20and%20fees."
+                        target="_blank" class="btn-app btn-emerald-app" style="width: 100%; margin-top: 16px;">
+                        <i class="fa-brands fa-whatsapp"></i> Inquire Grade 9
+                    </a>
+                </div>
+
+                <!-- Grade 10 -->
+                <div class="course-card" data-category="secondary" data-aos="fade-up" data-aos-delay="150"
+                    style="border: 2px solid var(--accent-emerald-light);">
+                    <div>
+                        <div class="course-grade-badge" style="background: var(--accent-emerald); color: white;"><i
+                                class="fa-solid fa-trophy"></i> Grade 10 Special</div>
+                        <h3>10th Board Master Class</h3>
+                        <p style="color: var(--neutral-500); font-size: 0.9rem;">Rigorous board preparation, past papers
+                            revision, and mock examination drills.</p>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Full Board Syllabus Coverage</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 10+ Board Mock Test Papers</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Personal Mentor & Parent Sessions</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20want%20to%20inquire%20about%20Grade%2010%20Board%20exam%20coaching%2C%20batch%20timings%2C%20and%20fee%20structure."
+                        target="_blank" class="btn-app btn-emerald-app" style="width: 100%; margin-top: 16px;">
+                        <i class="fa-brands fa-whatsapp"></i> Enroll Grade 10 Board
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= TEACHING PROCESS TIMELINE ================= -->
+    <section id="process" style="padding: 80px 0; background: var(--neutral-50);">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+
+            <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+                <div class="badge-pill badge-emerald">
+                    <i class="fa-solid fa-route"></i> Methodology
+                </div>
+                <h2 style="font-size: 2.2rem; margin-top: 14px; margin-bottom: 12px;">
+                    Our 7-Step <span class="gradient-text">Teaching Journey</span>
+                </h2>
+                <p style="color: var(--neutral-500);">
+                    A structured, proven path turning initial subject hesitation into exam success.
+                </p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step-card" data-aos="fade-up">
+                    <div class="step-number-badge">1</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Student Onboarding</h4>
+                        <p style="font-size: 0.85rem; color: var(--neutral-500);">Assessment of current academic
+                            baseline and custom study goal setting.</p>
+                    </div>
+                </div>
+
+                <div class="process-step-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="step-number-badge"
+                        style="background: linear-gradient(135deg, var(--accent-emerald) 0%, #047857 100%);">2</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Concept Lessons</h4>
+                        <p style="font-size: 0.85rem; color: var(--neutral-500);">Visual aids, real-life examples, and
+                            interactive fundamental teaching.</p>
+                    </div>
+                </div>
+
+                <div class="process-step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number-badge"
+                        style="background: linear-gradient(135deg, var(--accent-amber) 0%, #d97706 100%);">3</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Guided Practice</h4>
+                        <p style="font-size: 0.85rem; color: var(--neutral-500);">Supervised numerical practice and
+                            textbook question breakdown.</p>
+                    </div>
+                </div>
+
+                <div class="process-step-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="step-number-badge"
+                        style="background: linear-gradient(135deg, var(--accent-indigo) 0%, #4338ca 100%);">4</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Weekly Assessments</h4>
+                        <p style="font-size: 0.85rem; color: var(--neutral-500);">Regular weekly unit tests under
+                            exam-like conditions.</p>
+                    </div>
+                </div>
+
+                <div class="process-step-card" data-aos="fade-up">
+                    <div class="step-number-badge"
+                        style="background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);">5</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Performance Analytics</h4>
+                        <p style="font-size: 0.85rem; color: var(--neutral-500);">Identifying weak chapters and target
+                            revision focus areas.</p>
+                    </div>
+                </div>
+
+                <div class="process-step-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="step-number-badge"
+                        style="background: linear-gradient(135deg, var(--accent-emerald) 0%, #047857 100%);">6</div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Parent Updates</h4>
+                        <p style="font-size: 0.85rem; color: var(--neutral-500);">Regular one-on-one parent meetings to
+                            review continuous progress.</p>
+                    </div>
+                </div>
+
+                <div class="process-step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number-badge"
+                        style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);">7
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Exam Day Confidence</h4>
+                        <p style="font-size: 0.85rem; color: var(--neutral-500);">Mock exams, time-management tips, and
+                            final revision sessions.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= CONTACT & LOCATION HUB ================= -->
+    <section id="contact" style="padding: 80px 0; background: var(--neutral-0);">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+
+            <div class="contact-grid">
+
+                <div data-aos="fade-right">
+                    <div class="badge-pill badge-primary">
+                        <i class="fa-solid fa-headset"></i> Get In Touch
+                    </div>
+                    <h2 style="font-size: 2.2rem; margin-top: 14px; margin-bottom: 16px;">
+                        Visit Our Academy or <span class="gradient-text">Contact Us</span>
+                    </h2>
+                    <p style="color: var(--neutral-500); line-height: 1.8; margin-bottom: 24px;">
+                        Have questions about admissions, batch timings, or subject coaching? We are here to help!
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div
+                                style="width: 44px; height: 44px; border-radius: var(--radius-md); background: var(--primary-soft); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1rem; font-weight: 700;">Address</h4>
+                                <p style="font-size: 0.9rem; color: var(--neutral-500);">Shop 17, Cornerstone, Near Axis
+                                    Bank Yogidham Branch, Opposite Patels R Mart, Kalyan West - 421301</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div
+                                style="width: 44px; height: 44px; border-radius: var(--radius-md); background: var(--accent-emerald-soft); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1rem; font-weight: 700;">Phone Number</h4>
+                                <p style="font-size: 0.9rem; color: var(--neutral-500);"><a href="tel:+919152837001"
+                                        style="font-weight: 600; color: var(--primary);">+91 91528 37001</a></p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div
+                                style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(99, 102, 241, 0.12); color: var(--accent-indigo); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1rem; font-weight: 700;">Email</h4>
+                                <p style="font-size: 0.9rem; color: var(--neutral-500);"><a
+                                        href="mailto:sankalpacademykalyan@gmail.com"
+                                        style="font-weight: 600; color: var(--primary);">sankalpacademykalyan@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="contact-action-buttons">
+                        <a href="https://wa.me/919152837001?text=Hello%20Sankalp%20Academy%2C%20I%20am%20interested%20in%20enrolling%20my%20child%20for%20coaching."
+                            target="_blank" class="action-btn action-btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Direct WhatsApp
+                        </a>
+                        <a href="tel:+919152837001" class="action-btn action-btn-call">
+                            <i class="fa-solid fa-phone" style="font-size: 1.1rem;"></i> Call Directly
+                        </a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="contact-card glass-card">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Direct WhatsApp Inquiry</h3>
+                        <p style="font-size: 0.88rem; color: var(--neutral-500); margin-bottom: 20px;">Fill in student
+                            details to start an instant WhatsApp chat with our admissions team.</p>
+
+                        <form id="inquiryFormDirect">
+                            <div class="form-group">
+                                <label for="directName">Student's Full Name</label>
+                                <input type="text" id="directName" class="form-control" placeholder="Enter student name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="directPhone">Parent's Mobile Number</label>
+                                <input type="tel" id="directPhone" class="form-control"
+                                    placeholder="Enter 10-digit phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="directGrade">Select Grade / Standard</label>
+                                <select id="directGrade" class="form-control" required>
+                                    <option value="">Choose Grade</option>
+                                    <option value="Grade 5">Grade 5</option>
+                                    <option value="Grade 6">Grade 6</option>
+                                    <option value="Grade 7">Grade 7</option>
+                                    <option value="Grade 8">Grade 8</option>
+                                    <option value="Grade 9">Grade 9</option>
+                                    <option value="Grade 10">Grade 10</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-app btn-emerald-app"
+                                style="width: 100%; margin-top: 10px;">
+                                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= INQUIRY MODAL POPUP ================= -->
+    <div class="modal-overlay" id="inquiryModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 style="font-size: 1.5rem; margin-bottom: 6px; color: var(--primary);">Quick Admission Inquiry</h3>
+            <p style="font-size: 0.88rem; color: var(--neutral-500); margin-bottom: 20px;">Sankalp Academy - Grade 5 to
+                10 Coaching</p>
+
+            <form id="inquiryForm">
+                <div class="form-group">
+                    <label>Student Name</label>
+                    <input type="text" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Grade / Class</label>
+                    <select name="grade" class="form-control" required>
+                        <option value="">Select Grade</option>
+                        <option value="Grade 5">Grade 5</option>
+                        <option value="Grade 6">Grade 6</option>
+                        <option value="Grade 7">Grade 7</option>
+                        <option value="Grade 8">Grade 8</option>
+                        <option value="Grade 9">Grade 9</option>
+                        <option value="Grade 10">Grade 10 Board</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Parent Contact Number</label>
+                    <input type="tel" class="form-control" placeholder="+91 Mobile Number" required>
+                </div>
+
+                <button type="submit" class="btn-app btn-emerald-app" style="width: 100%; margin-top: 12px;">
+                    <i class="fa-brands fa-whatsapp"></i> Send WhatsApp Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+            <div class="footer-grid">
+
+                <div class="footer-col">
+                    <div class="brand-logo" style="margin-bottom: 16px;">
+                        <img src="sanklplogo.jpg" alt="Sankalp Academy Logo"
+                            style="height:40px; border-radius: var(--radius-sm);">
+                        <div class="brand-info">
+                            <h1 style="color: var(--neutral-0); font-size: 1.15rem;">Sankalp Academy</h1>
+                            <p style="color: var(--accent-emerald-light);">Kalyan West</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--neutral-500); line-height: 1.7;">
+                        Building strong conceptual foundations and academic excellence for Grade 5 to 10 students.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#why">Why Choose Us</a></li>
+                        <li><a href="#courses">Courses Offered</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Academy Portals</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://sankalpacademy.vercel.app/student" target="_blank"><i class="fa-solid fa-user-graduate" style="color: var(--primary-light); margin-right: 6px;"></i> Student Portal</a></li>
+                        <li><a href="https://sankalpacademy.vercel.app/teacher" target="_blank"><i class="fa-solid fa-chalkboard-user" style="color: var(--accent-emerald-light); margin-right: 6px;"></i> Teacher Portal</a></li>
+                        <li><a href="https://sankalpacademy.vercel.app/admin" target="_blank"><i class="fa-solid fa-user-shield" style="color: var(--accent-indigo); margin-right: 6px;"></i> Admin Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p style="font-size: 0.88rem; color: var(--neutral-500); margin-bottom: 10px;">
+                        <i class="fa-solid fa-location-dot"
+                            style="color: var(--accent-emerald-light); margin-right: 8px;"></i>
+                        Shop 17, Cornerstone, Near Axis Bank Yogidham Branch, Kalyan West - 421301
+                    </p>
+                    <p style="font-size: 0.88rem; color: var(--neutral-500); margin-bottom: 10px;">
+                        <i class="fa-solid fa-phone" style="color: var(--accent-emerald-light); margin-right: 8px;"></i>
+                        <a href="tel:+919152837001" style="color: var(--neutral-300);">+91 91528 37001</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sankalp Academy. All Rights Reserved. Building Strong Foundations, Creating Better
+                    Futures.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
