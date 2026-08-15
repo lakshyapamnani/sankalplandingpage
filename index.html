@@ -50,10 +50,11 @@
                 <a href="#about">About</a>
                 <a href="#why">Why Us</a>
                 <a href="#courses">Courses</a>
+                <a href="#portals">Portals</a>
                 <a href="#process">Process</a>
                 <a href="#contact">Contact</a>
                 <button class="desktop-nav-portals-link" id="desktopNavPortalsBtn">
-                    <i class="fa-solid fa-graduation-cap"></i> Portals
+                    <i class="fa-solid fa-graduation-cap"></i> Portals Sidebar
                 </button>
             </nav>
 
@@ -100,7 +101,7 @@
         </div>
 
         <div class="web-sidebar-body">
-            <div class="web-portal-card student-card">
+            <a href="https://sankalpacademy.vercel.app/student" target="_blank" class="web-portal-card student-card">
                 <div class="portal-card-header">
                     <div class="portal-icon-wrapper student-icon">
                         <i class="fa-solid fa-user-graduate"></i>
@@ -109,13 +110,13 @@
                 </div>
                 <h4>Student Portal</h4>
                 <p>Access study resources, view class schedules, check assignment marks, and track performance.</p>
-                <a href="https://sankalpacademy.vercel.app/student" target="_blank" class="portal-launch-btn btn-student">
+                <div class="portal-launch-btn btn-student">
                     <span>Launch Student Portal</span>
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="web-portal-card teacher-card">
+            <a href="https://sankalpacademy.vercel.app/teacher" target="_blank" class="web-portal-card teacher-card">
                 <div class="portal-card-header">
                     <div class="portal-icon-wrapper teacher-icon">
                         <i class="fa-solid fa-chalkboard-user"></i>
@@ -124,13 +125,13 @@
                 </div>
                 <h4>Teacher Portal</h4>
                 <p>Manage batch schedules, record daily attendance, upload course material, and send student updates.</p>
-                <a href="https://sankalpacademy.vercel.app/teacher" target="_blank" class="portal-launch-btn btn-teacher">
+                <div class="portal-launch-btn btn-teacher">
                     <span>Launch Teacher Portal</span>
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="web-portal-card admin-card">
+            <a href="https://sankalpacademy.vercel.app/admin" target="_blank" class="web-portal-card admin-card">
                 <div class="portal-card-header">
                     <div class="portal-icon-wrapper admin-icon">
                         <i class="fa-solid fa-user-shield"></i>
@@ -139,11 +140,11 @@
                 </div>
                 <h4>Admin Portal</h4>
                 <p>Manage institute admissions, faculty assignments, system configurations, and master analytics.</p>
-                <a href="https://sankalpacademy.vercel.app/admin" target="_blank" class="portal-launch-btn btn-admin">
+                <div class="portal-launch-btn btn-admin">
                     <span>Launch Admin Portal</span>
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
 
         <div class="web-sidebar-footer">
@@ -608,6 +609,75 @@
                     </a>
                 </div>
 
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= ACADEMY PORTALS SECTION ================= -->
+    <section id="portals" style="padding: 80px 0; background: linear-gradient(180deg, var(--neutral-50) 0%, var(--neutral-0) 100%); border-top: 1px solid var(--neutral-200); border-bottom: 1px solid var(--neutral-200);">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+
+            <div style="text-align: center; max-width: 650px; margin: 0 auto; margin-bottom: 48px;">
+                <div class="badge-pill badge-primary">
+                    <i class="fa-solid fa-graduation-cap"></i> Digital Campus
+                </div>
+                <h2 style="font-size: 2.2rem; margin-top: 14px; margin-bottom: 12px;">
+                    Academy <span class="gradient-text">Portals</span>
+                </h2>
+                <p style="color: var(--neutral-500);">
+                    Select your portal below to log in directly and access resources, schedules, and analytics.
+                </p>
+            </div>
+
+            <div class="portals-section-grid">
+                <!-- Student Portal Card -->
+                <a href="https://sankalpacademy.vercel.app/student" target="_blank" rel="noopener noreferrer" class="portal-main-card student-main-card" data-aos="fade-up">
+                    <div class="portal-main-header">
+                        <div class="portal-icon-box student-box">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <span class="portal-tag tag-student">Student Access</span>
+                    </div>
+                    <h3>Student Portal</h3>
+                    <p>Access study resources, view class schedules, check assignment marks, and track overall performance.</p>
+                    <div class="portal-launch-link student-link">
+                        <span>Launch Student Portal</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- Teacher Portal Card -->
+                <a href="https://sankalpacademy.vercel.app/teacher" target="_blank" rel="noopener noreferrer" class="portal-main-card teacher-main-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portal-main-header">
+                        <div class="portal-icon-box teacher-box">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <span class="portal-tag tag-teacher">Faculty Access</span>
+                    </div>
+                    <h3>Teacher Portal</h3>
+                    <p>Manage batch schedules, record daily attendance, upload course material, and send student updates.</p>
+                    <div class="portal-launch-link teacher-link">
+                        <span>Launch Teacher Portal</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- Admin Portal Card -->
+                <a href="https://sankalpacademy.vercel.app/admin" target="_blank" rel="noopener noreferrer" class="portal-main-card admin-main-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portal-main-header">
+                        <div class="portal-icon-box admin-box">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <span class="portal-tag tag-admin">Management Access</span>
+                    </div>
+                    <h3>Admin Portal</h3>
+                    <p>Manage institute admissions, faculty assignments, system configurations, and master analytics.</p>
+                    <div class="portal-launch-link admin-link">
+                        <span>Launch Admin Portal</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
             </div>
 
         </div>

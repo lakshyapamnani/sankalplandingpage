@@ -93,6 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // 3c. Portal Links Redirection & Drawer Cleanup
+  const portalLinks = document.querySelectorAll('a[href*="sankalpacademy.vercel.app"]');
+  portalLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetUrl = link.getAttribute('href');
+      if (targetUrl) {
+        closeWebPortalsSidebar();
+        closeDrawer();
+        window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
+
   // 4. Interactive Inquiry Modal Controls
   const modalOverlay = document.getElementById('inquiryModal');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
