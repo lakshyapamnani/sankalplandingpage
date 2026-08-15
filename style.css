@@ -576,6 +576,9 @@ button {
 }
 
 .web-portal-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   background: #ffffff;
   border-radius: var(--radius-lg);
   padding: 20px;
@@ -708,6 +711,140 @@ button {
   color: var(--accent-indigo);
 }
 .btn-admin:hover {
+  background: var(--accent-indigo);
+  color: #ffffff;
+}
+
+/* Main Page Portals Section Grid & Cards */
+.portals-section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 991px) {
+  .portals-section-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.portal-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--neutral-0);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  border: 1px solid var(--neutral-200);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+}
+
+.portal-main-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.student-main-card:hover {
+  border-color: rgba(24, 58, 114, 0.4);
+}
+
+.teacher-main-card:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.admin-main-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.portal-main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.portal-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.student-box {
+  background: rgba(24, 58, 114, 0.1);
+  color: var(--primary);
+}
+
+.teacher-box {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-emerald);
+}
+
+.admin-box {
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--accent-indigo);
+}
+
+.portal-main-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--neutral-900);
+  margin-bottom: 10px;
+}
+
+.portal-main-card p {
+  font-size: 0.9rem;
+  color: var(--neutral-500);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.portal-launch-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.student-link {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.portal-main-card:hover .student-link {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.teacher-link {
+  background: var(--accent-emerald-soft);
+  color: var(--accent-emerald);
+}
+
+.portal-main-card:hover .teacher-link {
+  background: var(--accent-emerald);
+  color: #ffffff;
+}
+
+.admin-link {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--accent-indigo);
+}
+
+.portal-main-card:hover .admin-link {
   background: var(--accent-indigo);
   color: #ffffff;
 }
