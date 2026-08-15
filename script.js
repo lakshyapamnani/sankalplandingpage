@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 3c. Portal Links Redirection & Drawer Cleanup
-  const portalLinks = document.querySelectorAll('a[href*="sankalpacademy.vercel.app"]');
+  const portalLinks = document.querySelectorAll('a[href*="app.sankalpeducare.com"]');
   portalLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
