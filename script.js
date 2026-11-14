@@ -268,24 +268,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('mobileDrawerThemeBtn')
   ].filter(Boolean);
 
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark-theme');
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('sankalp-theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark-theme');
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('sankalp-theme', 'light');
-    }
-  }
-
   themeToggleBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const isCurrentlyDark = document.documentElement.classList.contains('dark-theme') ||
-                              document.documentElement.getAttribute('data-theme') === 'dark';
-      applyTheme(isCurrentlyDark ? 'light' : 'dark');
+      if (typeof window.toggleDarkMode === 'function') {
+        window.toggleDarkMode();
+      }
     });
   });
 });
