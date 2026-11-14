@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3b. Web View Collapsible Portals Sidebar Controls
   const webPortalsToggleBtn = document.getElementById('webPortalsToggleBtn');
-  const desktopNavPortalsBtn = document.getElementById('desktopNavPortalsBtn');
   const webPortalsEdgeToggle = document.getElementById('webPortalsEdgeToggle');
   const webPortalsCloseBtn = document.getElementById('webPortalsCloseBtn');
   const webPortalsBackdrop = document.getElementById('webPortalsBackdrop');
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     webPortalsSidebar?.classList.add('open');
     webPortalsBackdrop?.classList.add('open');
     webPortalsToggleBtn?.classList.add('open');
-    desktopNavPortalsBtn?.classList.add('active');
     webPortalsEdgeToggle?.classList.add('sidebar-active');
     document.body.style.overflow = 'hidden';
   }
@@ -68,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     webPortalsSidebar?.classList.remove('open');
     webPortalsBackdrop?.classList.remove('open');
     webPortalsToggleBtn?.classList.remove('open');
-    desktopNavPortalsBtn?.classList.remove('active');
     webPortalsEdgeToggle?.classList.remove('sidebar-active');
     document.body.style.overflow = '';
   }
@@ -82,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   webPortalsToggleBtn?.addEventListener('click', toggleWebPortalsSidebar);
-  desktopNavPortalsBtn?.addEventListener('click', toggleWebPortalsSidebar);
   webPortalsEdgeToggle?.addEventListener('click', toggleWebPortalsSidebar);
   webPortalsCloseBtn?.addEventListener('click', closeWebPortalsSidebar);
   webPortalsBackdrop?.addEventListener('click', closeWebPortalsSidebar);
@@ -265,4 +261,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const statsRibbon = document.querySelector('.stats-ribbon');
   if (statsRibbon) counterObserver.observe(statsRibbon);
+
+  // 9. Dark Mode Theme Toggle Controls
+  const themeToggleBtns = [
+    document.getElementById('themeToggleBtn'),
+    document.getElementById('mobileDrawerThemeBtn')
+  ].filter(Boolean);
+
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (typeof window.toggleDarkMode === 'function') {
+        window.toggleDarkMode();
+      }
+    });
+  });
 });

@@ -39,6 +39,51 @@
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
+    <!-- Dark Mode Theme Initialization & Control -->
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('sankalp-theme');
+                var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                    document.documentElement.classList.add('dark-theme');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark-theme');
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+
+        function toggleDarkMode() {
+            var isDark = document.documentElement.classList.contains('dark-theme') ||
+                         (document.body && document.body.classList.contains('dark-theme')) ||
+                         document.documentElement.getAttribute('data-theme') === 'dark';
+            var newTheme = isDark ? 'light' : 'dark';
+            if (newTheme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+                if (document.body) document.body.classList.add('dark-theme');
+                document.documentElement.setAttribute('data-theme', 'dark');
+                if (document.body) document.body.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark-theme');
+                if (document.body) document.body.classList.remove('dark-theme');
+                document.documentElement.setAttribute('data-theme', 'light');
+                if (document.body) document.body.setAttribute('data-theme', 'light');
+            }
+            try {
+                localStorage.setItem('sankalp-theme', newTheme);
+            } catch (e) {}
+        }
+        window.toggleDarkMode = toggleDarkMode;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.documentElement.classList.contains('dark-theme') && document.body) {
+                document.body.classList.add('dark-theme');
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -65,13 +110,14 @@
                 <a href="#portals">Portals</a>
                 <a href="#process">Process</a>
                 <a href="#contact">Contact</a>
-                <button class="desktop-nav-portals-link" id="desktopNavPortalsBtn">
-                    <i class="fa-solid fa-graduation-cap"></i> Portals Sidebar
-                </button>
             </nav>
 
             <!-- Actions -->
             <div class="header-actions">
+                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <i class="fa-solid fa-sun light-icon"></i>
+                </button>
                 <button class="desktop-portals-btn" id="webPortalsToggleBtn" aria-label="Toggle Portals Sidebar">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span>Academy Portals</span>
@@ -183,9 +229,15 @@
                     <p style="font-size:0.65rem;">Kalyan West</p>
                 </div>
             </div>
-            <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Menu">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button class="theme-toggle-btn" id="mobileDrawerThemeBtn" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <i class="fa-solid fa-sun light-icon"></i>
+                </button>
+                <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
         </div>
 
         <nav class="drawer-nav">
@@ -263,7 +315,7 @@
                 <!-- Left Hero Content -->
                 <div class="hero-content" data-aos="fade-right">
                     <div class="badge-pill badge-emerald">
-                        <i class="fa-solid fa-shield-halved"></i> Admissions Open for 2026–27
+                        <i class="fa-solid fa-shield-halved"></i> Admissions Open
                     </div>
 
                     <h1 class="hero-title">
@@ -329,7 +381,7 @@
     </section>
 
     <!-- ================= ABOUT SECTION ================= -->
-    <section id="about" style="padding: 80px 0; background: var(--neutral-0);">
+    <section id="about" class="site-section section-white">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
             <div style="display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;"
                 class="md:grid-cols-2">
@@ -392,7 +444,7 @@
     </section>
 
     <!-- ================= BENTO GRID (WHY CHOOSE US) ================= -->
-    <section id="why" style="padding: 80px 0; background: var(--neutral-50);">
+    <section id="why" class="site-section section-gray">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
 
             <div style="text-align: center; max-width: 650px; margin: 0 auto;">
@@ -477,7 +529,7 @@
     </section>
 
     <!-- ================= COURSES WE OFFER ================= -->
-    <section id="courses" style="padding: 80px 0; background: var(--neutral-0);">
+    <section id="courses" class="site-section section-white">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
 
             <div style="text-align: center; max-width: 650px; margin: 0 auto;">
@@ -627,7 +679,7 @@
     </section>
 
     <!-- ================= ACADEMY PORTALS SECTION ================= -->
-    <section id="portals" style="padding: 80px 0; background: linear-gradient(180deg, var(--neutral-50) 0%, var(--neutral-0) 100%); border-top: 1px solid var(--neutral-200); border-bottom: 1px solid var(--neutral-200);">
+    <section id="portals" class="site-section section-portals">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
 
             <div style="text-align: center; max-width: 650px; margin: 0 auto; margin-bottom: 48px;">
@@ -696,7 +748,7 @@
     </section>
 
     <!-- ================= TEACHING PROCESS TIMELINE ================= -->
-    <section id="process" style="padding: 80px 0; background: var(--neutral-50);">
+    <section id="process" class="site-section section-gray">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
 
             <div style="text-align: center; max-width: 650px; margin: 0 auto;">
@@ -787,7 +839,7 @@
     </section>
 
     <!-- ================= CONTACT & LOCATION HUB ================= -->
-    <section id="contact" style="padding: 80px 0; background: var(--neutral-0);">
+    <section id="contact" class="site-section section-white">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
 
             <div class="contact-grid">
