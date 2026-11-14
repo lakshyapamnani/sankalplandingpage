@@ -51,7 +51,9 @@
 }
 
 /* Base Reset & Typography */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -70,7 +72,8 @@ body {
   color: var(--neutral-800);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-bottom: 76px; /* Space for mobile bottom navbar */
+  padding-bottom: 76px;
+  /* Space for mobile bottom navbar */
 }
 
 @media (min-width: 1024px) {
@@ -79,7 +82,12 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--neutral-900);
   font-weight: 700;
@@ -111,13 +119,16 @@ button {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--neutral-100);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--neutral-300);
   border-radius: var(--radius-full);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
@@ -176,6 +187,7 @@ button {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: var(--neutral-0);
 }
+
 .btn-primary-app:hover {
   box-shadow: 0 10px 25px rgba(24, 58, 114, 0.35);
   transform: translateY(-2px);
@@ -186,6 +198,7 @@ button {
   color: var(--primary);
   border: 1px solid var(--neutral-200);
 }
+
 .btn-secondary-app:hover {
   background: var(--primary-soft);
   border-color: var(--primary);
@@ -196,6 +209,7 @@ button {
   color: var(--neutral-0);
   box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
 }
+
 .btn-emerald-app:hover {
   box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
   transform: translateY(-2px);
@@ -211,11 +225,13 @@ button {
   font-size: 0.85rem;
   font-weight: 600;
 }
+
 .badge-emerald {
   background: var(--accent-emerald-soft);
   color: var(--accent-emerald);
   border: 1px solid rgba(16, 185, 129, 0.2);
 }
+
 .badge-primary {
   background: var(--primary-soft);
   color: var(--primary);
@@ -284,12 +300,14 @@ button {
 .desktop-nav {
   display: none;
 }
+
 @media (min-width: 1024px) {
   .desktop-nav {
     display: flex;
     align-items: center;
     gap: 24px;
   }
+
   .desktop-nav a {
     font-weight: 600;
     font-size: 0.95rem;
@@ -297,10 +315,12 @@ button {
     position: relative;
     padding: 6px 0;
   }
+
   .desktop-nav a:hover,
   .desktop-nav a.active {
     color: var(--primary);
   }
+
   .desktop-nav a.active::after {
     content: '';
     position: absolute;
@@ -310,29 +330,6 @@ button {
     height: 3px;
     background: var(--primary);
     border-radius: var(--radius-full);
-  }
-
-  .desktop-nav-portals-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: var(--primary-soft);
-    color: var(--primary);
-    border-radius: var(--radius-full);
-    font-weight: 700;
-    font-size: 0.9rem;
-    border: 1px solid rgba(24, 58, 114, 0.15);
-    transition: var(--transition-fast);
-    cursor: pointer;
-  }
-
-  .desktop-nav-portals-link:hover,
-  .desktop-nav-portals-link.active {
-    background: var(--primary);
-    color: var(--neutral-0);
-    border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(24, 58, 114, 0.25);
   }
 }
 
@@ -390,6 +387,43 @@ button {
   color: var(--neutral-800);
   font-size: 1.2rem;
   transition: var(--transition-fast);
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--neutral-100);
+  color: var(--neutral-800);
+  border: 1px solid var(--neutral-200);
+  font-size: 1.15rem;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--neutral-200);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.92);
+}
+
+.theme-toggle-btn .light-icon {
+  display: none;
+  color: #fbbf24;
+}
+
+.theme-toggle-btn .dark-icon {
+  display: block;
+  color: var(--primary);
 }
 
 .mobile-drawer-toggle:active {
@@ -692,6 +726,7 @@ button {
   background: var(--primary-soft);
   color: var(--primary);
 }
+
 .btn-student:hover {
   background: var(--primary);
   color: #ffffff;
@@ -701,6 +736,7 @@ button {
   background: var(--accent-emerald-soft);
   color: var(--accent-emerald);
 }
+
 .btn-teacher:hover {
   background: var(--accent-emerald);
   color: #ffffff;
@@ -710,6 +746,7 @@ button {
   background: rgba(99, 102, 241, 0.1);
   color: var(--accent-indigo);
 }
+
 .btn-admin:hover {
   background: var(--accent-indigo);
   color: #ffffff;
@@ -1058,6 +1095,7 @@ button {
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
   transform: translateY(-10px);
 }
+
 .bottom-nav-action:active {
   transform: translateY(-10px) scale(0.92);
 }
@@ -1143,6 +1181,7 @@ button {
   .hero-cta-group {
     width: auto;
   }
+
   .hero-cta-group .btn-app {
     width: auto;
   }
@@ -1176,14 +1215,20 @@ button {
   bottom: -16px;
   left: 10px;
 }
+
 .stat-right {
   top: -16px;
   right: 10px;
 }
 
 @keyframes floatAnim {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-8px); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-8px);
+  }
 }
 
 .floating-icon {
@@ -1542,6 +1587,7 @@ button {
   background: #25d366;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
+
 .action-btn-whatsapp:hover {
   background: #1ebc57;
   transform: translateY(-2px);
@@ -1551,6 +1597,7 @@ button {
   background: var(--primary);
   box-shadow: 0 4px 15px rgba(24, 58, 114, 0.3);
 }
+
 .action-btn-call:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
@@ -1690,4 +1737,312 @@ button {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;
   color: var(--neutral-500);
+}
+
+/* ==========================================================================
+   Dark Mode Theme System
+   ========================================================================== */
+html.dark-theme,
+[data-theme="dark"] {
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --primary-light: #60a5fa;
+  --primary-soft: rgba(59, 130, 246, 0.16);
+
+  --accent-emerald: #10b981;
+  --accent-emerald-light: #34d399;
+  --accent-emerald-soft: rgba(16, 185, 129, 0.16);
+
+  --accent-amber: #fbbf24;
+  --accent-amber-light: #fcd34d;
+  --accent-indigo: #818cf8;
+
+  --neutral-0: #131b2e;
+  --neutral-50: #0b1120;
+  --neutral-100: #1a253a;
+  --neutral-200: #26354f;
+  --neutral-300: #3e506d;
+  --neutral-500: #94a3b8;
+  --neutral-700: #cbd5e1;
+  --neutral-800: #e2e8f0;
+  --neutral-900: #f8fafc;
+
+  --glass-bg: rgba(19, 27, 46, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.55);
+}
+
+/* Ensure buttons and badges with light text always remain crisp white */
+.btn-primary-app,
+.btn-emerald-app,
+.desktop-portals-btn,
+.web-sidebar-edge-toggle,
+.step-number-badge,
+.action-btn,
+.bottom-nav-action,
+.footer-col h4,
+.sidebar-brand-title h3 {
+  color: #ffffff !important;
+}
+
+/* Dark Mode Theme Toggle Button States */
+html.dark-theme .theme-toggle-btn,
+[data-theme="dark"] .theme-toggle-btn {
+  background: #1a253a;
+  border-color: #26354f;
+  color: #f8fafc;
+}
+
+html.dark-theme .theme-toggle-btn:hover,
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background: #24324d;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+html.dark-theme .theme-toggle-btn .dark-icon,
+[data-theme="dark"] .theme-toggle-btn .dark-icon {
+  display: none;
+}
+
+html.dark-theme .theme-toggle-btn .light-icon,
+[data-theme="dark"] .theme-toggle-btn .light-icon {
+  display: block;
+}
+
+/* Header & Navigation in Dark Mode */
+html.dark-theme .site-header.scrolled,
+[data-theme="dark"] .site-header.scrolled {
+  background: rgba(11, 17, 32, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+html.dark-theme .brand-info h1,
+[data-theme="dark"] .brand-info h1 {
+  color: #60a5fa;
+}
+
+html.dark-theme .desktop-nav a,
+[data-theme="dark"] .desktop-nav a {
+  color: var(--neutral-300);
+}
+
+html.dark-theme .desktop-nav a:hover,
+[data-theme="dark"] .desktop-nav a:hover {
+  color: #93c5fd;
+}
+
+html.dark-theme .desktop-nav a.active,
+[data-theme="dark"] .desktop-nav a.active {
+  color: #60a5fa;
+}
+
+html.dark-theme .desktop-nav a.active::after,
+[data-theme="dark"] .desktop-nav a.active::after {
+  background: #60a5fa;
+}
+
+/* Buttons in Dark Mode */
+html.dark-theme .btn-secondary-app,
+[data-theme="dark"] .btn-secondary-app {
+  background: #1a253a;
+  color: #60a5fa;
+  border-color: #26354f;
+}
+
+html.dark-theme .btn-secondary-app:hover,
+[data-theme="dark"] .btn-secondary-app:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Course Filter Tabs in Dark Mode */
+html.dark-theme .course-tabs-wrapper,
+[data-theme="dark"] .course-tabs-wrapper {
+  background: #1a253a;
+  border: 1px solid #26354f;
+}
+
+html.dark-theme .tab-btn,
+[data-theme="dark"] .tab-btn {
+  color: var(--neutral-500);
+}
+
+html.dark-theme .tab-btn.active,
+[data-theme="dark"] .tab-btn.active {
+  background: #26354f;
+  color: #60a5fa;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards & Elevated Containers in Dark Mode */
+html.dark-theme .stat-card,
+html.dark-theme .bento-card,
+html.dark-theme .course-card,
+html.dark-theme .portal-main-card,
+html.dark-theme .process-step-card,
+html.dark-theme .contact-card,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .bento-card,
+[data-theme="dark"] .course-card,
+[data-theme="dark"] .portal-main-card,
+[data-theme="dark"] .process-step-card,
+[data-theme="dark"] .contact-card {
+  background: #141d31;
+  border-color: #26354f;
+}
+
+html.dark-theme .stat-card:hover,
+html.dark-theme .bento-card:hover,
+html.dark-theme .course-card:hover,
+html.dark-theme .portal-main-card:hover,
+html.dark-theme .process-step-card:hover,
+[data-theme="dark"] .stat-card:hover,
+[data-theme="dark"] .bento-card:hover,
+[data-theme="dark"] .course-card:hover,
+[data-theme="dark"] .portal-main-card:hover,
+[data-theme="dark"] .process-step-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Bottom Navigation Bar in Dark Mode */
+html.dark-theme .mobile-bottom-bar,
+[data-theme="dark"] .mobile-bottom-bar {
+  background: rgba(11, 17, 32, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+html.dark-theme .bottom-nav-item,
+[data-theme="dark"] .bottom-nav-item {
+  color: var(--neutral-500);
+}
+
+html.dark-theme .bottom-nav-item.active,
+[data-theme="dark"] .bottom-nav-item.active {
+  color: #60a5fa;
+}
+
+html.dark-theme .bottom-nav-item.active::after,
+[data-theme="dark"] .bottom-nav-item.active::after {
+  background: #60a5fa;
+}
+
+/* Mobile Slide-Over Drawer in Dark Mode */
+html.dark-theme .mobile-drawer,
+[data-theme="dark"] .mobile-drawer {
+  background: var(--neutral-0);
+  border-left: 1px solid var(--neutral-200);
+}
+
+html.dark-theme .drawer-header,
+[data-theme="dark"] .drawer-header {
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+html.dark-theme .drawer-footer,
+[data-theme="dark"] .drawer-footer {
+  border-top: 1px solid var(--neutral-200);
+}
+
+html.dark-theme .drawer-close,
+[data-theme="dark"] .drawer-close {
+  background: var(--neutral-100);
+  color: var(--neutral-800);
+}
+
+html.dark-theme .drawer-nav a,
+[data-theme="dark"] .drawer-nav a {
+  color: var(--neutral-700);
+}
+
+html.dark-theme .drawer-nav a:active,
+html.dark-theme .drawer-nav a.active,
+[data-theme="dark"] .drawer-nav a:active,
+[data-theme="dark"] .drawer-nav a.active {
+  background: var(--primary-soft);
+  color: #60a5fa;
+}
+
+/* Portals Web Sidebar in Dark Mode */
+html.dark-theme .web-portals-sidebar,
+[data-theme="dark"] .web-portals-sidebar {
+  background: var(--neutral-0);
+  border-left: 1px solid var(--neutral-200);
+}
+
+html.dark-theme .web-sidebar-body,
+[data-theme="dark"] .web-sidebar-body {
+  background: var(--neutral-50);
+}
+
+html.dark-theme .web-portal-card,
+[data-theme="dark"] .web-portal-card {
+  background: #141d31;
+  border-color: #26354f;
+}
+
+html.dark-theme .web-portal-card h4,
+[data-theme="dark"] .web-portal-card h4 {
+  color: var(--neutral-900);
+}
+
+html.dark-theme .web-sidebar-footer,
+[data-theme="dark"] .web-sidebar-footer {
+  background: var(--neutral-0);
+  border-top: 1px solid var(--neutral-200);
+}
+
+/* Form Controls & Inputs in Dark Mode */
+html.dark-theme .form-control,
+[data-theme="dark"] .form-control {
+  background: #1a253a;
+  border-color: #26354f;
+  color: var(--neutral-900);
+}
+
+html.dark-theme .form-control:focus,
+[data-theme="dark"] .form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+html.dark-theme .form-control option,
+[data-theme="dark"] .form-control option {
+  background: #1a253a;
+  color: #f8fafc;
+}
+
+html.dark-theme .modal-content,
+[data-theme="dark"] .modal-content {
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+}
+
+html.dark-theme .modal-close,
+[data-theme="dark"] .modal-close {
+  background: var(--neutral-100);
+  color: var(--neutral-800);
+}
+
+html.dark-theme #inquiryModal h3,
+[data-theme="dark"] #inquiryModal h3 {
+  color: #60a5fa !important;
+}
+
+/* Contact Links in Dark Mode */
+html.dark-theme a[href^="tel:"],
+html.dark-theme a[href^="mailto:"],
+[data-theme="dark"] a[href^="tel:"],
+[data-theme="dark"] a[href^="mailto:"] {
+  color: #60a5fa !important;
+}
+
+/* Site Footer in Dark Mode */
+html.dark-theme .site-footer,
+[data-theme="dark"] .site-footer {
+  background: #060a12;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }

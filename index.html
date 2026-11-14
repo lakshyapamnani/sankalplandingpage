@@ -39,6 +39,20 @@
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
+    <!-- Dark Mode Theme Initialization (prevents flash of wrong theme) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('sankalp-theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark-theme');
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark-theme');
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -65,13 +79,14 @@
                 <a href="#portals">Portals</a>
                 <a href="#process">Process</a>
                 <a href="#contact">Contact</a>
-                <button class="desktop-nav-portals-link" id="desktopNavPortalsBtn">
-                    <i class="fa-solid fa-graduation-cap"></i> Portals Sidebar
-                </button>
             </nav>
 
             <!-- Actions -->
             <div class="header-actions">
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <i class="fa-solid fa-sun light-icon"></i>
+                </button>
                 <button class="desktop-portals-btn" id="webPortalsToggleBtn" aria-label="Toggle Portals Sidebar">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span>Academy Portals</span>
@@ -183,9 +198,15 @@
                     <p style="font-size:0.65rem;">Kalyan West</p>
                 </div>
             </div>
-            <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Menu">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button class="theme-toggle-btn" id="mobileDrawerThemeBtn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <i class="fa-solid fa-sun light-icon"></i>
+                </button>
+                <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
         </div>
 
         <nav class="drawer-nav">
